@@ -39,7 +39,7 @@ The platform consists of three main microservices:
 
 1. Clone the repository:
 ```bash
-git clone [<repository-url>](https://github.com/dhanjo/Ardra)
+git clone https://github.com/dhanjo/Ardra
 cd Ardra
 ```
 
