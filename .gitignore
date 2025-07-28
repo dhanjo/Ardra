@@ -1,0 +1,248 @@
+# ========================
+# Go (Golang)
+# ========================
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Build directories
+build/
+dist/
+
+# ========================
+# Python
+# ========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# ========================
+# Docker
+# ========================
+# Docker build context
+.dockerignore
+
+# Docker volumes
+docker-volumes/
+
+# ========================
+# Database
+# ========================
+# PostgreSQL data
+postgres-data/
+*.sql.backup
+*.db
+*.sqlite
+*.sqlite3
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+log/
+
+# ========================
+# Environment Variables
+# ========================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# ========================
+# Security Tools Output
+# ========================
+# Nmap output files
+*.xml
+*.nmap
+*.gnmap
+
+# Subfinder output
+subfinder-output/
+
+# Nuclei templates and output
+nuclei-output/
+*.nuclei
+
+# General scan results
+scan-results/
+output/
+results/
+
+# API keys and secrets
+secrets/
+keys/
+*.key
+*.pem
+*.crt
+*.csr
+
+# ========================
+# IDE and Editor files
+# ========================
+# Visual Studio Code
+.vscode/
+*.swp
+*.swo
+*~
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ========================
+# OS Files
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ========================
+# Temporary Files
+# ========================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ========================
+# Project Specific
+# ========================
+test_improvements.py
+
+# Compiled binaries
+Ardra-backend/posturemanagement
+Ardra-fetcher/ardra-fetcher
+subhunt/subhunt
+
+# Tool installations
+subhunt/tools/
+
+# Configuration backups
+*.conf.bak
+config.backup

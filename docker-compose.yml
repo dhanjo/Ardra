@@ -1,0 +1,81 @@
+version: '4.0'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: posture_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d posture_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: ./Ardra-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+      - "8083:8083"
+      - "8084:8084"
+      - "8085:8085"
+      - "8086:8086"
+      - "8087:8087"
+      - "8088:8088"
+      - "8089:8089"
+      - "8090:8090"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: posture_db
+
+  subhunt:
+    build:
+      context: ./subhunt
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: posture_db
+    # If Subhunt needs to expose any ports, add them here
+    # ports:
+    #   - "<host_port>:<container_port>"
+    # If Subhunt needs to interact with the database, uncomment and modify depends_on
+    # depends_on:
+    #   db:
+    #     condition: service_healthy
+
+  ardra-fetcher:
+    build:
+      context: ./Ardra-fetcher
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: posture_db 
