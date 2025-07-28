@@ -89,17 +89,9 @@ After deployment, you can interact with the platform through its REST APIs. Each
 
 ## 🔒 Security
 
-This platform is designed for defensive security purposes only. It helps organizations:
+This platform is designed for defensive security purposes only. It helps organisations:
 - Discover their external attack surface
 - Identify potential security vulnerabilities
 - Monitor subdomain proliferation
 - Assess email security configurations
 - Track technology stack changes
-
-## 📄 License
-
-[Add your license information here]
-
-## 🤝 Contributing
-
-[Add contribution guidelines here]
